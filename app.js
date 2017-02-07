@@ -64,6 +64,7 @@ app.get('/sms/send', (req, res, next) => {
     body: 'Hello from Google App Engine'
   }, (err) => {
     if (err) {
+	  console.log(`Error as Bad Request`+err);
       next(err);
       return;
     }
